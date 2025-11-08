@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 8px;
+    }
+  </style>
+  <script>
+    function stampa() {
+      var nome = document.getElementById("nome").value;
+      var cognome = document.getElementById("cognome").value;
+      var indirizzo = document.getElementById("indirizzo").value;
+      var citta = document.getElementById("citta").value;
+
+      var risultato = "<p>" + nome + " " + cognome + ", " + indirizzo + ", " + citta + "</p>";
+      document.getElementById("dest").innerHTML = risultato;
+    }
+  </script>
+</head>
+<body bgcolor="white">
+  <input type="text" id="nome" placeholder="Nome"><br>
+  <input type="text" id="cognome" placeholder="Cognome"><br>
+  <input type="text" id="indirizzo" placeholder="Indirizzo"><br>
+  <input type="text" id="citta" placeholder="Città"><br>
+  <input type="button" value="Stampa" onclick="stampa()"><br><br>
+
+  <div id="dest"></div>
+</body>
+</html>
